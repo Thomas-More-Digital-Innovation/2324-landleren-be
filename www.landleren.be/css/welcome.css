@@ -1,0 +1,305 @@
+/* ---- www.landleren.be ---- */
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    
+    
+}
+
+body {
+    min-height: 1000px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    background: url(../img/achtergrond.webp);
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+.shapes {
+    overflow: hidden;
+}
+
+.shapes .rocket {
+    z-index: 200 !important;
+    
+}
+
+.shapes .rocket-holder {
+    animation:up-down infinite ;    
+    animation-direction: alternate;
+    animation-duration: 200ms;
+    z-index: 100 !important;
+    position: absolute;
+    top: 47%;
+    left:30%;
+}
+
+ @keyframes up-down {
+    100% {transform: translateY(0px);}
+    0% {transform: translateY(2px);}
+} 
+
+.shapes .shape0 {
+    position: absolute;
+    background: beige;
+    border-radius: 80%;
+    z-index: 8;
+    right: -2000px;
+    animation: rocket ;
+    animation-iteration-count: 3;
+}
+
+.shapes .shape1 {
+    height: 3px;
+    width: 30px;   
+    top: 50%;
+    animation-duration: 2s;
+    animation-delay: 500ms;  
+}
+
+.shapes .shape2 {
+    height: 3px;
+    width: 60px;
+    top: 60%;  
+    animation-duration: 2s;
+    animation-delay: 300ms;  
+}
+
+.shapes .shape3 {
+    height: 3px;
+    width: 30px;
+    top: 45%;  
+    animation-duration: 2s;
+    animation-delay: 100ms;
+}
+
+.shapes .shape4 {
+    height: 3px;
+    width: 10px;
+    top: 60%;    
+    animation-duration: 2s;
+    animation-delay: 50ms;
+}
+
+.shapes .shape5 {
+    height: 3px;
+    width: 30px;
+    top: 50%;    
+    animation-duration: 2s;
+}
+
+@keyframes rocket {
+    0% {transform:translateX(0px)}
+    100% {transform:translateX(-4000px)}
+}
+
+.planets {
+    position: absolute;
+     right: -2000px; 
+     z-index: -1;
+     animation: rocket ;
+    animation-iteration-count: 1;
+    animation-duration: 6s;  
+   
+}
+
+.planet1 {
+  
+    top:20%;    
+    animation-delay: 50ms;
+}
+
+.planet2 {
+    
+    top:2%;   
+    animation-delay: 1s;
+}
+
+.planet4 {
+    
+    bottom:5%;
+    animation-delay: 2s;
+}
+
+.planet5 {
+    
+    bottom:30%;
+    animation-delay: 3s;
+}
+
+.planet6 {
+    top:20%;
+    animation-delay: 4s;
+}
+
+.planet7 {
+    bottom:30%;
+    animation-delay: 6s;
+}
+
+.planet8 {
+    width: 400px;
+    bottom:-30%;
+    left: -1000;
+    animation-duration:15s ;
+    animation-delay: 1s;
+}
+
+.planet9 {
+    bottom:10%;
+    animation-delay: 3s;
+}
+
+.final {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    animation:final 15s normal ;
+    z-index: 100;
+}
+
+.planetenreeksTwee {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    animation:final 15s normal ;
+    z-index: 100;
+}
+
+.planetenreeksDrie {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    animation:final 15s normal ;
+    z-index: 100;
+}
+
+.planetenreeksVier {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    animation:final 15s normal ;
+    z-index: 100;
+}
+
+@keyframes final {
+    0% {transform:translateX(5000px)}
+    100% {transform:translateX(0px)}
+}
+
+@keyframes planetenreeksTwee {
+    0% {transform:translateX(5000px)}
+    50% {transform:translateX(0px)}
+}
+
+@keyframes planetenreeksDrie {
+    0% {transform:translateX(5000px)}
+    100% {transform:translateX(0px)}
+}
+
+@keyframes planetenreeksVier {
+    0% {transform:translateX(5000px)}
+    50% {transform:translateX(0px)}
+}
+
+
+.final img {
+    position: absolute;
+    
+}
+
+.planetenreeksTwee img {
+    position: absolute;
+} 
+
+.planetenreeksDrie img {
+    position: absolute;
+}
+
+.planetenreeksVier img {
+    position: absolute;
+}
+
+
+a>img{
+    transition: filter 0.5s ease;
+}
+
+ a>img:hover {
+    filter: contrast(1.25);
+}
+
+.final .astronaut {
+    width: 100px;
+    top: 0px;
+    animation:up-down-final  infinite ;    
+    animation-direction: alternate;
+    animation-duration: 1s;
+    
+}
+.final .planet10 {
+    animation:up-down-final  infinite ;    
+    animation-direction: alternate;
+    animation-duration: 2s;
+    bottom: 10%;
+}
+.final .planet11 {
+    animation:up-down-final  infinite ;    
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-delay: 2s;
+   top: 10%;
+}
+
+.planetenreeksTwee .planet12 {
+    position: absolute;
+    animation:up-down-final  infinite ;    
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    top: 50px;
+}
+
+.planetenreeksDrie .planet14 {
+    position: absolute;
+    animation:up-down-final  infinite ;    
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    bottom: 20%;
+}
+
+.planetenreeksVier .planet15 {
+    position: absolute;
+    animation:up-down-final  infinite ;    
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    top: 65px;
+}
+
+.planetenreeksTwee .planet13 {
+    animation:up-down-final  infinite ;    
+    animation-direction: alternate;
+    animation-duration: 2s;
+    bottom: 20%;
+}
+
+@keyframes up-down-final {
+    100% {transform: translateY(0px);}
+   0% {transform: translateY(10px);}
+} 
+
+
+
+
+
+
+
+
+

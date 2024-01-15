@@ -1,0 +1,307 @@
+/* ------ wwww.landleren.be ------ */
+
+
+/* part of the GeoSelector program */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+body {
+    margin: 0;
+    font-size: 16px;
+    background-image: url("https://static.landleren.be/img/quiz_bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+.custom-vak {
+    max-width: 700px;
+    background-color: rgba(255, 0, 0, .55);
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    animation: fadeInRight 1s ease;
+}
+
+.custom-vak2 {
+    /* set container to almost as big as possible */
+    max-width: 95%;
+}
+
+@keyframes fadeInRight {
+    0% {
+        transform: translateX(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.custom-vak::before,
+.custom-vak::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.custom-vak.hide {
+    display: none;
+}
+
+.start-scherm h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+    line-height: 25px;
+}
+
+.start-scherm p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 22px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.start-scherm p span {
+    font-weight: 500;
+}
+
+.start-scherm .btn {
+    margin-top: 20px;
+}
+
+.size-btn {
+    width: 250px;
+}
+
+.btn {
+    padding: 15px 45px;
+    background-color: #042d89;
+    color: #f7cc0b;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.quiz-vak .aantal-vragenr,
+.quiz-vak .vraag-tekst,
+.quiz-vak .keuze-mogelijkheden,
+.quiz-vak .volgende-vraag-btn,
+.quiz-vak .antwoord-aanduider {
+    width: 100%;
+    float: left;
+}
+
+.quiz-vak .aantal-vragen {
+    font-size: 18px;
+    color: #f7cc0b;
+    font-weight: 600;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    line-height: 25px
+}
+
+.quiz-vak .vraag-tekst {
+    font-size: 22px;
+    color: #fff;
+    line-height: 28px;
+    font-weight: 400;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.quiz-vak .vraag-tekst img {
+    max-width: 100%;
+    display: block;
+    margin-top: 15px;
+}
+
+.quiz-vak .keuze-mogelijkheden .option {
+    background-color: #f7cc0b;
+    padding: 13px 15px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #042d89;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-transform: capitalize;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+.quiz-vak .keuze-mogelijkheden .option.already-answered {
+    pointer-events: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.quiz-vak .keuze-mogelijkheden .option.correct::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    z-index: -1;
+    animation: slideInLeft .5s ease forwards
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.quiz-vak .keuze-mogelijkheden .option.wrong::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    z-index: -1;
+    animation: slideInLeft .5s ease forwards
+}
+
+.quiz-vak .keuze-mogelijkheden .option.wrong {
+    color: #ffffff;
+}
+
+.quiz-vak .keuze-mogelijkheden .option.correct {
+    color: #ffffff;
+}
+
+.quiz-vak .btn {
+    margin: 15px 0;
+}
+
+.quiz-vak .antwoord-aanduider {
+    border-top: 1px solid #fff;
+}
+
+.quiz-vak .antwoord-aanduider div {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 3px;
+    margin-top: 15px;
+}
+
+.quiz-vak .antwoord-aanduider div.correct {
+    background-color: green;
+    background-image: url("https://static.landleren.be/img/happy-smiley.webp");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.quiz-vak .antwoord-aanduider div.wrong {
+    background-color: red;
+    background-image: url("https://static.landleren.be/img/sad-smiley.webp");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid black;
+    border-radius: 10px;
+}
+
+.logo {
+    width: 300px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    filter: drop-shadow(10px 5px 2px #000);
+}
+
+.resultaat-vak {
+    text-align: center;
+}
+
+.resultaat-vak.hide {
+    display: none;
+}
+
+.resultaat-vak h1 {
+    font-size: 36px;
+    line-height: 42px;
+    color: #042d89;
+}
+
+td {
+    background-color: #f7cc0b;
+    color: #042d89;
+    font-weight: bold;
+}
+
+.resultaat-vak table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+
+.resultaat-vak table td {
+    border: 1px solid #cccccc;
+    padding: 8px 15px;
+    font-weight: 500;
+    color: #000000;
+    width: 50%;
+    text-align: left;
+    font-size: 18px;
+}
+
+.resultaat-vak .btn {
+    margin-right: 20px;
+}
+
+@media(max-width: 767px) {
+    .resultaat-vak .btn {
+        margin-bottom: 15px;
+    }
+    body {
+        padding: 15px;
+    }
+}
