@@ -1,0 +1,89 @@
+<!-- ------ wwww.landleren.be ------ -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Landen van Europa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="https://static-landleren.digitalinnovation.be/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://static-landleren.digitalinnovation.be/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://static-landleren.digitalinnovation.be/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://static-landleren.digitalinnovation.be/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://static-landleren.digitalinnovation.be/favicon/site.webmanifest">
+    <link rel="mask-icon" href="https://static-landleren.digitalinnovation.be/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://static-landleren.digitalinnovation.be/css/style.css">
+</head>
+
+<body>
+
+    <div class="start-scherm custom-vak">
+        <h3>Opdracht:</h3>
+        <p>In deze oefening wordt er op de kaart van Europa een land ingekleurd. Bij elke vraag zullen er vier antwoorden worden getoond, slechts één is juist. Duid het juiste antwoord aan en klik vervolgens op de knop onderaan 'volgende vraag' om naar de
+            volgende vraag te gaan.</p>
+        <!-- <p>Totaal aantal vragen: <span class="totaal-vragen"></span></p> -->
+        <button type="button" class="btn" onclick="startQuiz()">Begin Oefening</button>
+    </div>
+
+    <div class="quiz-vak custom-vak hide">
+        <div class="aantal-vragen">
+
+        </div>
+        <div class="vraag-tekst">
+
+        </div>
+        <div class="keuze-mogelijkheden">
+
+        </div>
+        <div class="volgende-vraag-btn">
+            <button type="button" class="btn" onclick="next()">Volgende</button>
+        </div>
+        <div class="antwoord-aanduider">
+
+        </div>
+    </div>
+
+    <div class="resultaat-vak custom-vak hide">
+        <h1>Resultaten:</h1>
+        <img class="logo" src="https://static-landleren.digitalinnovation.be/img/logo.webp" alt="logo">
+        <table>
+            <tr>
+                <td>Aantal vragen</td>
+                <td><span class="totaal-vragen"></span></td>
+            </tr>
+            <tr>
+                <td>Pogingen</td>
+                <td><span class="totaal-poging"></span></td>
+            </tr>
+            <tr>
+                <td>Correct</td>
+                <td><span class="totaal-correct"></span></td>
+            </tr>
+            <tr>
+                <td>Fout</td>
+                <td><span class="totaal-fout"></span></td>
+            </tr>
+            <tr>
+                <td>Percentage</td>
+                <td><span class="percentage"></span></td>
+            </tr>
+            <tr>
+                <td>Uw Totale Score</td>
+                <td><span class="totaal-score"></span></td>
+            </tr>
+        </table>
+        <button type="button" class="btn size-btn" onclick="tryAgainQuiz()">Probeer opnieuw</button>
+        <a href="kaart.html">
+            <button type="button" class="btn size-btn" onclick="goToHome()">Terug</button>
+        </a>
+    </div>
+
+
+    <script src="https://static-landleren.digitalinnovation.be/js/kaart-moeilijk.js"></script>
+    <script src="https://static-landleren.digitalinnovation.be/js/app.js"></script>
+</body>
+
+</html>
